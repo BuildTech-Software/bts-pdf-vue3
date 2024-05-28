@@ -132,7 +132,7 @@ const getDoc = () => {
     emit("onProgress", loadRatio.value);
   };
   loadingTask.value.promise.then(() => {
-    emit("onComplete");
+    emit("onComplete", { totalPages: totalPages });
   });
 };
 
